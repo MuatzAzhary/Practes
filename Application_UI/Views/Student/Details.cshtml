@@ -1,0 +1,62 @@
+﻿@model Student
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div style="padding:50px;">
+    <h1>Details</h1>
+
+    <div>
+        <h4>Student</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.StudentName)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.StudentName)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Age)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Age)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Adress)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Adress)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Birthday)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Birthday)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Classes)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Classes.ClassName)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.General)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.General.GeneralName)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Parent)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Parent.ParentName)
+            </dd>
+        </dl>
+    </div>
+    <div>
+        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Edit</a> |
+        <a asp-action="Index" class="btn btn-outline-dark">Back to List</a>
+    </div>
+</div>

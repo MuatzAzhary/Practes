@@ -1,0 +1,74 @@
+﻿@model HomeViewModel
+@{
+    ViewData["Title"] = "Index";
+}
+@{
+    int x = 0;
+    int y = 0;
+    int c = 0;
+    foreach (var item in Model.Parents)
+
+    {
+
+        x++;
+
+    }
+    foreach (var item in Model.Students)
+
+    {
+
+        y++;
+
+    }
+    foreach (var item in Model.Teachers)
+
+    {
+
+        c++;
+
+    }
+}
+<div class="main-content">
+    <div class="cards">
+        <div class="card">
+            <h2>Total Students</h2>
+            <p>@y</p>
+        </div>
+        <div class="card">
+            <h2>Total Teachers</h2>
+            <p>@c</p>
+        </div>
+        <div class="card">
+            <h2>Total Parents</h2>
+            <p>@x</p>
+        </div>
+        <div>
+            <a href="~/Teacher/Index">
+
+                <div class="card">
+                    <h2>View All Teachers</h2>
+                </div>
+            </a>
+
+        </div>
+        <div>
+            <a href="~/Student/Index">
+                <div class="card">
+                    <h2>View All Students</h2>
+                </div>
+            </a>
+        </div>
+
+        <div>
+            <a href="~/Parents/Index">
+
+                <div class="card">
+                    <h2>View All Parents</h2>
+                </div>
+            </a>
+        </div>
+    </div>
+
+</div>
+
+

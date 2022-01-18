@@ -1,0 +1,196 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,700;1,200;1,600;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+/*========== Setting Veriables ==========*/
+:root {
+    --hue-color: 239;
+    --main-color: hsl(var(--hue-color), 94%, 5%);
+    --hover-color: hsl(var(--hue-color), 94%, 40%);
+    --title-color: hsl(var(--hue-color), 0%, 22%);
+    --text-color: hsl(var(--hue-color), 5%, 61%);
+    --white-color: #ffffff;
+    --shadow-color: hsl(var(--hue-color), 98%, 92%);
+    --main-fontSize: 30px;
+    --First-fontSize: 50px;
+    --second-fontSize: 20px;
+    --third-fontSize: 18px;
+    --main-font: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+p {
+    margin-top: 10px;
+    color: var(--text-color);
+    font-size: var(--third-fontSize);
+}
+
+img {
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+}
+
+:hover {
+    transition: .5s ease;
+}
+
+h2 {
+    font-size: var(--second-fontSize) !important;
+    color: var(--title-color);
+}
+
+body {
+    position: relative;
+}
+/*========== Aside  ==========*/
+aside {
+    width: 15%;
+    height: 100vh;
+    position: fixed;
+    z-index: 999;
+    background-color: var(--main-color);
+}
+
+header {
+    padding: 10px;
+}
+
+.header-title {
+    color: var(--white-color);
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation {
+    margin-bottom: 10px;
+    width: 100px;
+    text-align: left;
+    padding-top: 30px;
+}
+
+    .navigation a {
+        font-size: var(--third-fontSize);
+        color: var(--text-color);
+        display: inline-block;
+        margin-top: 5px !important;
+        font-weight: 600;
+        padding: 10px 20px;
+        border-radius: 10px;
+    }
+
+.control-btn {
+    padding: 10px 20px;
+    color: var(--white-color);
+    background-color: var(--hover-color);
+    border-radius: 10px;
+    margin-left: 20px;
+}
+
+.navigation a:hover {
+    background-color: var(--hover-color);
+    color: var(--white-color);
+}
+
+.control-btn:hover {
+    background-color: var(--text-color);
+}
+
+.image {
+    margin: 10px auto;
+    text-align: center;
+}
+
+    .image img {
+        width: 100px;
+        height: 100px;
+        border-radius: 100%;
+    }
+
+.image-title {
+    color: var(--white-color);
+    width: 100px;
+    margin: 10px auto;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--text-color);
+}
+
+.home {
+    position: fixed;
+    z-index: 888;
+    top: 0;
+    left: 15%;
+    width: 85%;
+}
+
+.content {
+    position: relative;
+    padding: 20px 10px !important;
+    background-color: var(--main-color);
+}
+h3{
+    font-size: var(--second-fontSize) !important;
+}
+.main-title {
+    display: flex;
+    justify-content: center;
+    color: var(--text-color);
+}
+
+section {
+    position: relative;
+}
+
+    section .main {
+        position: absolute;
+        top: 0%;
+        left: 15%;
+        padding-top: 100px;
+    }
+
+.main-content {
+    padding: 20px 100px;
+}
+
+.cards {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 250px;
+    height: 200px;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    background-color: var(--main-color) !important;
+}
+
+    .card h2 {
+        padding-top: 50px
+    }
+
+    .card p {
+        margin-top: 20px;
+    }
+
+
+    input{
+        width:300px !important;
+        margin:10px;
+    }
+    select{
+        width:300px !important;
+        margin:10px;
+    }

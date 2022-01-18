@@ -1,0 +1,42 @@
+﻿@model IEnumerable<Classes>
+
+@{
+    ViewData["Title"] = "Index";
+    int n = 0;
+}
+
+<div style="padding:50px;">
+    <h1>Classes</h1>
+
+    <p>
+        <a asp-action="Create" class="btn btn-dark">Create New</a>
+    </p>
+    <table class="table">
+        <thead class="table-dark">
+            <tr>
+                <th>#</th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ClassName)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                n++;
+                <tr>
+                    <td>@n</td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ClassName)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-outline-dark">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

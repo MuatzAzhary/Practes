@@ -1,0 +1,53 @@
+﻿@model Parent
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div style="padding:50px;">
+    <h1>Create</h1>
+
+    <h4>Parent</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="ParentName" class="control-label"></label>
+                    <input asp-for="ParentName" class="form-control" />
+                    <span asp-validation-for="ParentName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Email" class="control-label"></label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Phone" class="control-label"></label>
+                    <input asp-for="Phone" class="form-control" />
+                    <span asp-validation-for="Phone" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Sex" class="control-label"></label>
+                    <input asp-for="Sex" class="form-control" />
+                    <span asp-validation-for="Sex" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <a asp-action="Index" class="btn btn-outline-dark">Back to List</a>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{
+    await Html.RenderPartialAsync("_ValidationScriptsPartial");
+}
+}

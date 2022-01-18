@@ -1,0 +1,65 @@
+﻿@model StudentViewModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div style="padding: 50px;">
+    <h1>Create</h1>
+
+    <h4>Student</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+   
+                <div class="form-group">
+                    <label asp-for="StudentName" class="control-label"></label>
+                    <input asp-for="StudentName" class="form-control" />
+                    <span asp-validation-for="StudentName" class="text-danger"></span>
+
+
+                    <label asp-for="Age" class="control-label"></label>
+                    <input asp-for="Age" class="form-control" />
+                    <span asp-validation-for="Age" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Adress" class="control-label"></label>
+                    <input asp-for="Adress" class="form-control" />
+                    <span asp-validation-for="Adress" class="text-danger"></span>
+              
+                    <label asp-for="Birthday" class="control-label"></label>
+                    <input asp-for="Birthday" class="form-control" />
+                    <span asp-validation-for="Birthday" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="ClassesId" class="control-label"></label>
+                    <select asp-for="ClassesId" class="form-control" asp-items="@(new SelectList(@Model.classes, "Id", "ClassName"))"></select>
+               
+                    <label asp-for="GeneralId" class="control-label"></label>
+                    <select asp-for="GeneralId" class="form-control" asp-items="@(new SelectList(@Model.General, "Id", "Sex"))"></select>
+                </div>
+                <div class="form-group">
+                    <label asp-for="ParentId" class="control-label"></label>
+                    <select asp-for="ParentId" class="form-control" asp-items="@(new SelectList(@Model.Parent, "Id", "ParentName"))"></select>
+                </div>
+                <input type="hidden" asp-for="Id" />
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <a asp-action="Index" class="btn btn-outline-dark">Back to List</a>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+    await Html.RenderPartialAsync("_ValidationScriptsPartial");
+}
+}

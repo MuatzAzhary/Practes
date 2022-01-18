@@ -1,0 +1,32 @@
+﻿@model Application_Core.Models.General
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div style="padding:50px;">
+    <h1>Details</h1>
+
+    <div>
+        <h4>General</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.GeneralName)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.GeneralName)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Sex)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Sex)
+            </dd>
+        </dl>
+    </div>
+    <div>
+        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Edit</a> |
+        <a asp-action="Index" class="btn btn-outline-dark">Back to List</a>
+    </div>
+</div>
